@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="946.0" style="-fx-background-color: #00bfff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.CreateNewUserController">
+   <children>
+      <Label layoutX="383.0" layoutY="14.0" text="Create New User" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="61.0" layoutY="67.0" prefHeight="598.0" prefWidth="824.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="149.0" layoutY="28.0" prefHeight="30.0" prefWidth="94.0" text="UserName:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledusername" layoutX="317.0" layoutY="27.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="149.0" layoutY="163.0" prefHeight="30.0" prefWidth="94.0" text="Password:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="206.0" prefHeight="30.0" prefWidth="164.0" text="Confirm Password:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="255.0" prefHeight="30.0" prefWidth="94.0" text="Email:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledEmail" layoutX="317.0" layoutY="254.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="149.0" layoutY="301.0" prefHeight="30.0" prefWidth="94.0" text="Phone:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledPhone" layoutX="317.0" layoutY="300.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="149.0" layoutY="346.0" prefHeight="30.0" prefWidth="94.0" text="Age:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledAge" layoutX="317.0" layoutY="345.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="149.0" layoutY="399.0" prefHeight="30.0" prefWidth="94.0" text="Gender" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radoiMale" layoutX="317.0" layoutY="401.0" mnemonicParsing="false" selected="true" text="Male" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radoiFemale" layoutX="438.0" layoutY="401.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Female" textFill="#383560" toggleGroup="$genderGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <HBox alignment="CENTER" layoutX="280.0" layoutY="509.0" prefHeight="55.0" prefWidth="265.0">
+               <children>
+                  <Button fx:id="saveNewUserPatinetBtn" mnemonicParsing="false" onAction="#saveNewUserPatinet" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #00bfff;" text="Save" textFill="WHITE">
+
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancelPatinetBtn" mnemonicParsing="false" onAction="#cancelUserPatinetCreation" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #ff3300;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="149.0" layoutY="443.0" prefHeight="30.0" prefWidth="94.0" text="Role" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radoiAdmin" layoutX="317.0" layoutY="445.0" mnemonicParsing="false" selected="true" text="Admin" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="RoleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radoiPatient" layoutX="438.0" layoutY="445.0" mnemonicParsing="false" text="Patient" textFill="#383560" toggleGroup="$RoleGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <PasswordField fx:id="txtfiledPassword" layoutX="317.0" layoutY="162.0" prefHeight="31.0" prefWidth="216.0" />
+            <PasswordField fx:id="txtfiledConfirmPassword" layoutX="317.0" layoutY="205.0" prefHeight="31.0" prefWidth="216.0" />
+            <Label layoutX="149.0" layoutY="74.0" prefHeight="30.0" prefWidth="105.0" text="First Name:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledFirstName" layoutX="317.0" layoutY="73.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="149.0" layoutY="120.0" prefHeight="30.0" prefWidth="105.0" text="Last Name:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledLastName" layoutX="317.0" layoutY="119.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

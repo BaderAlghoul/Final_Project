@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="674.0" prefWidth="785.0" style="-fx-background-color: #00bfff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.NewUserPatientController">
+   <children>
+      <Label layoutX="311.0" layoutY="14.0" text="New User Patient" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="44.0" text="Welcome To The Medical Clinic">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="59.0" layoutY="88.0" prefHeight="547.0" prefWidth="668.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="28.0" prefHeight="30.0" prefWidth="94.0" text="UserName:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledusername" layoutX="274.0" layoutY="28.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding></TextField>
+            <Label alignment="CENTER" layoutX="69.0" layoutY="159.0" prefHeight="30.0" prefWidth="94.0" text="Password:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="67.0" layoutY="201.0" prefHeight="30.0" prefWidth="164.0" text="Confirm Password:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="244.0" prefHeight="30.0" prefWidth="94.0" text="Email:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledEmail" layoutX="274.0" layoutY="243.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="72.0" layoutY="284.0" prefHeight="30.0" prefWidth="94.0" text="Phone:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledPhone" layoutX="274.0" layoutY="283.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="69.0" layoutY="330.0" prefHeight="30.0" prefWidth="94.0" text="Age:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledAge" layoutX="274.0" layoutY="329.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="67.0" layoutY="387.0" prefHeight="30.0" prefWidth="94.0" text="Gender" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radoiMale" layoutX="274.0" layoutY="389.0" mnemonicParsing="false" selected="true" text="Male" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radoiFemale" layoutX="395.0" layoutY="389.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Female" textFill="#383560" toggleGroup="$genderGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <HBox alignment="CENTER" layoutX="202.0" layoutY="464.0" prefHeight="55.0" prefWidth="265.0">
+               <children>
+                  <Button fx:id="saveNewUserPatinetBtn" mnemonicParsing="false" onAction="#saveNewUserPatinet" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #00bfff;" text="Save" textFill="WHITE">
+          
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancelPatinetBtn" mnemonicParsing="false" onAction="#cancelUserPatinetCreation" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #ff3300;" text="Cancel" textFill="WHITE">
+         
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <PasswordField fx:id="txtfiledPassword" layoutX="274.0" layoutY="158.0" prefHeight="31.0" prefWidth="216.0" />
+            <PasswordField fx:id="txtfiledConfirmPassword" layoutX="274.0" layoutY="200.0" prefHeight="31.0" prefWidth="216.0" />
+            <Label alignment="CENTER" layoutX="67.0" layoutY="73.0" prefHeight="30.0" prefWidth="104.0" text="First Name:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledFirstName" layoutX="274.0" layoutY="72.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label alignment="CENTER" layoutX="67.0" layoutY="116.0" prefHeight="30.0" prefWidth="104.0" text="Last Name:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfiledLastName" layoutX="274.0" layoutY="115.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

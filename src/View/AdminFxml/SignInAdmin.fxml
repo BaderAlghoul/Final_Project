@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="425.0" prefWidth="623.0" style="-fx-background-color: #00bfff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.SignInAdminController">
+   <children>
+      <Label layoutX="245.0" layoutY="20.0" text="Sing In Doctor" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="241.0" layoutY="56.0" text="Welcome Doctor">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="75.0" layoutY="96.0" prefHeight="290.0" prefWidth="474.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="61.0" layoutY="118.0" prefHeight="30.0" prefWidth="94.0" text="Password:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="50.0" prefHeight="30.0" prefWidth="94.0" text="Email:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfSignInDoctorEmail" layoutX="185.0" layoutY="50.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <HBox alignment="CENTER" layoutX="105.0" layoutY="194.0" prefHeight="55.0" prefWidth="265.0">
+               <children>
+                  <Button fx:id="saveNewUserPatinetBtn" mnemonicParsing="false" onAction="#btnSaveSingDoctor" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #00bfff;" text="Sign In" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancelPatinetBtn" mnemonicParsing="false" onAction="#btnCancelSingDoctor" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #ff3300;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <PasswordField fx:id="tfSignInDoctorPassword" layoutX="185.0" layoutY="118.0" prefHeight="31.0" prefWidth="216.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

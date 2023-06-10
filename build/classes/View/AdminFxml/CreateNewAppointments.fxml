@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="668.0" style="-fx-background-color: #00bfff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.CreateNewAppointmentsController">
+   <children>
+      <Label layoutX="244.0" layoutY="30.0" text="New Appointments" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="47.0" layoutY="90.0" prefHeight="326.0" prefWidth="575.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="119.0" layoutY="28.0" prefHeight="30.0" prefWidth="94.0" text="Date:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="67.0" prefHeight="30.0" prefWidth="94.0" text="Day:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="appointmentDayTF" layoutX="212.0" layoutY="67.0" prefHeight="31.0" prefWidth="216.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="hourTimeTF" alignment="CENTER" layoutX="212.0" layoutY="109.0" prefHeight="31.0" prefWidth="103.0" promptText="Hour">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="119.0" layoutY="109.0" prefHeight="30.0" prefWidth="55.0" text="Time:" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="159.0" prefHeight="30.0" prefWidth="94.0" text="Status" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radoiFree" layoutX="213.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="Free" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="statusGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radoiBooked" layoutX="333.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Booked" textFill="#383560" toggleGroup="$statusGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <HBox fx:id="appointmentCancelButton" alignment="CENTER" layoutX="155.0" layoutY="233.0" prefHeight="55.0" prefWidth="265.0">
+               <children>
+                  <Button fx:id="appointmentSaveButton" mnemonicParsing="false" onAction="#btnAppointmentSave" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #00bfff;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancelPatinetBtn" mnemonicParsing="false" onAction="#btnAppointmentCancel" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #ff3300;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <DatePicker fx:id="appointmentDatePicker" layoutX="211.0" layoutY="28.0" onAction="#datePicker" promptText="Enter a Date" />
+            <TextField fx:id="minuteTimeTF" alignment="CENTER" layoutX="326.0" layoutY="109.0" prefHeight="31.0" prefWidth="103.0" promptText="minute">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
